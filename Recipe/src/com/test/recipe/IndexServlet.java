@@ -16,14 +16,14 @@ import com.test.db.RecipeDB;
 /**
  * Servlet implementation class PostMethod
  */
-@WebServlet("/PostMethod")
-public class PostMethod extends HttpServlet {
+@WebServlet("/index")
+public class IndexServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public PostMethod() {
+    public IndexServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
