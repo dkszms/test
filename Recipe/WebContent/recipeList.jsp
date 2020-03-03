@@ -19,10 +19,13 @@
 			border: 1px solid #444444;
 		}
 	</style>
-	<script src = "recipeList.js"></script>
+	<script src="recipeList.js"> alert("ddd");</script>
 </head>
 <body>
 		레시피 목록
+	<input type="text" id="recipe-name"/>
+	<input type="button" value="검색" id="recipe-search"/>
+	<input type="button" value="등록" id="recipe-regist"/>
 	<table>
 		<c:forEach var="map" items="${al}" varStatus="status">
 			<tr id="recipe-detail">
@@ -31,7 +34,7 @@
 				<td id="recipe-description">${map.description}</td>
 			</tr>
 		</c:forEach>
-		</table>
-		<input type="button" value="클릭" id="tttt"/>
+	</table>
+	<input type="button" value="클릭" id="tttt"/>
 </body>
 </html>

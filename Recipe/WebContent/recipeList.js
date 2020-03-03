@@ -1,8 +1,8 @@
 // window.onload = function() {
 	window.addEventListener("load",function(){
-		
-		var recipeId = this.document.getElementsById("recipe-id");
-		recipeId.onclick = function() {
+			alert("test");
+			var recipeId = this.document.getElementsById("recipe-search");
+			recipeId.onclick = function() {
 			alert("으아아아");
 		}
 		// var recipeName = this.document.getElementsById("recipe-name");
@@ -13,6 +13,6 @@
 		// recipeDesc.onclick = function() {
 		// 	alert("으아아아");
 		// }
-	})
+	});
 	
 // } 
