@@ -12,12 +12,11 @@ window.addEventListener("load",function(){
 	var recipeTable = document.getElementById("recipe-table");
 	recipeTable.onclick = function() {
 		
-		//var tds = recipeTable.getElementsByTagName("td");
-		//var tds = recipeTable.getElementsByClassName("recipe-id");
-		var tds = recipeTable.getElementsByTagName("td");
+		var recipeId = recipeTable.querySelector("td[id='recipe-id']").textContent;
+		alert("test rh=  " +recipeId);
+
+		location.href="/detail?id="+recipeId;
 		
-		alert("test1212=  "+tds[0].value);
+
 	}
 });
-
-	

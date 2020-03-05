@@ -27,7 +27,12 @@
 	<input type="button" value="검색" id="recipe-search"/>
 	<input type="button" value="등록" id="recipe-regist"/>
 	<table id="recipe-table">
-		<c:forEach var="map" items="${al}" varStatus="status"> 
+			<tr>
+				<td>ID</td>
+				<td>레시피명</td>
+				<td>설명</td>
+			</tr>
+		<c:forEach var="map" items="${recipeAL}" varStatus="status"> 
 			<tr>
 				<td id="recipe-id">${map.id}</td>
 				<td>${map.name}</td>
@@ -36,6 +41,5 @@
 		</c:forEach>
 	</table>
 	<input type="button" value="클릭" id="tttt" />
-	<button id="tt"">테스트 </button>
 </body>
 </html>

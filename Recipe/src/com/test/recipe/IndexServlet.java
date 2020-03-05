@@ -33,9 +33,9 @@ public class IndexServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RecipeDB rdb = new RecipeDB();
-		ArrayList<Map<String, Object>> al = rdb.recipe();
+		ArrayList<Map<String, Object>> recipeAL = rdb.recipe();
 		
-		request.setAttribute("al", al);
+		request.setAttribute("recipeAL", recipeAL);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/recipeList.jsp");
 		dispatcher.forward(request, response);
 	}
