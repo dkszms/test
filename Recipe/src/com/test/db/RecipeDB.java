@@ -64,11 +64,12 @@ public class RecipeDB {
 		
 		Connection conn = dbu.getDBConnection();
 		
-		String sql = "select s.id, s.step, s.description, i.num, i.name, i.amount, i.unit  from step s"  
-				+ "		left outer join ingredient i"  
-				+ "		on s.id = i.ownerid" 
-				+ "		where s.ownerid = ?"  
-				+ "		order by s.step, i.num";
+		String sql = "select s.id, s.step, s.description, i.num, i.name, i.amount, i.unit, RANK() over(partition by s.id order by i.id) r, count(id)" + 
+				"                        from step s\r\n" + 
+				"						left outer join ingredient i" + 
+				"						on s.id = i.ownerid" + 
+				"						where s.ownerid = 'R001'" + 
+				"						order by s.step, i.num";
 		
 		
 		ArrayList<Map<String, Object>> al = new ArrayList<Map<String, Object>>();
